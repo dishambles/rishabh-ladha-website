@@ -43,9 +43,27 @@ Plain HTML + CSS. No JavaScript, no framework, no build step.
 - One "raised eyebrow" moment in the hero tagline — nowhere else
 - Copy is a provocation to react to, not final
 
+## Deployment (live as of 2026-04-22)
+
+- **Vercel**: https://rishabh-ladha-website.vercel.app (production, auto-deploys on push to `main`)
+- **GitHub**: https://github.com/dishambles/rishabh-ladha-website
+- **Vercel project**: `rishabh-ladha-website` under `dishambles-projects` scope
+- **Custom domain**: not yet configured — target `rishabhladha.com` (confirm with Rishabh)
+
+## Session history
+
+### 2026-04-22 — Initial build + deploy
+- Built all 5 pages from scratch (index, work, teaching, in-the-wild, contact)
+- Full CSS design system in `styles/main.css`
+- Portrait photo added (`assets/images/rishabh-portrait.jpg`) — SquadStack headshot, black polo, neutral background
+- Git repo initialized, GitHub repo created (public, under dishambles account), Vercel linked and deployed to production
+- All `[CONFIRM: ...]` placeholders still intact — content interview with Rishabh pending
+
 ## Content status
 
-All `[CONFIRM: ...]` markers in the HTML files are placeholders that need Rishabh's input before launch. Do not remove markers without actual confirmed content.
+Portrait photo: **done** — `assets/images/rishabh-portrait.jpg` wired into `index.html` hero.
+
+All other `[CONFIRM: ...]` markers in the HTML files need Rishabh's input before the site is fully launch-ready. Do not remove markers without actual confirmed content.
 
 **Critical blockers (site reads thin without these):**
 - Rishabh's actual email address → `contact.html`, `index.html`
@@ -54,7 +72,6 @@ All `[CONFIRM: ...]` markers in the HTML files are placeholders that need Rishab
 - SquadStack numbers (revenue, team size, representative deals) → `work.html`
 - Mesa course name and what he teaches → `teaching.html`
 - Scaler program name/module and what he teaches → `teaching.html`
-- Professional portrait photo → `assets/images/rishabh-portrait.jpg`
 
 **Important (improves quality):**
 - 3 "what I'm thinking about" statements → `index.html` (drafts exist, need Rishabh's sign-off)
@@ -62,22 +79,7 @@ All `[CONFIRM: ...]` markers in the HTML files are placeholders that need Rishab
 - Which hero tagline variant he prefers → `index.html` h1
 - Does he want the "private workshops" CTA on Teaching? → `teaching.html`
 - Does EPIC have restrictions on what he can publish about his role?
-
-## Adding the portrait photo
-
-Replace the `<div class="portrait-placeholder">` block in `index.html` with:
-
-```html
-<img
-  src="assets/images/rishabh-portrait.jpg"
-  alt="Rishabh Ladha"
-  class="hero-portrait"
-  width="280"
-  height="336"
->
-```
-
-Optimize the photo to WebP, max 800px wide, before adding. Target under 150KB.
+- Actual URLs for all In the Wild entries (currently all `#`) → `in-the-wild.html`
 
 ## Updating "In the Wild"
 
@@ -88,18 +90,14 @@ After each new podcast or talk: add a new `.wild-entry` block in the appropriate
 
 Max ~12–15 entries total. Be ruthless.
 
-## Deployment
+## Pre-launch checklist
 
-Deploy to Netlify or Vercel free tier. Drag-and-drop the folder or connect the repo.
-
-Domain: `rishabhladha.com` (or similar — confirm with Rishabh).
-
-Pre-launch checklist:
-- [ ] All `[CONFIRM: ...]` placeholders filled
-- [ ] Portrait photo added and optimized
+- [ ] All `[CONFIRM: ...]` placeholders filled (see Content status above)
+- [x] Portrait photo added and wired into index.html
 - [ ] Every page tested on mobile (read it top to bottom, cut anything that doesn't earn its space)
-- [ ] Meta description and og:image filled on all pages
+- [ ] Meta og:image filled on all pages (currently only index.html has it)
 - [ ] Favicon added (RL monogram in `#2D4A3E`)
+- [ ] Custom domain configured on Vercel (`rishabhladha.com`)
 - [ ] Add URL to Rishabh's LinkedIn headline and speaker bios after launch
 
 Do NOT do a launch announcement post. This is a credibility anchor — it should feel like it's always been there.
