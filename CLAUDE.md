@@ -46,11 +46,11 @@ Plain HTML + CSS. No JavaScript (the only `<script>` is JSON-LD structured data 
 
 ## Contact & lead capture (rule reversed 2026-09-16)
 
-The April "no contact form" rule was **reversed by owner decision**. Forms on index.html and contact.html are plain HTML POST (no JS), styled in-system, with a `_honey` honeypot. **They are inert (`action="#"`) until Rishabh's email is confirmed** — no public email exists anywhere (verified). To activate: set `action="https://formsubmit.co/HIS_EMAIL"` on both forms, submit once, click FormSubmit's confirmation link. Direct channels shown meanwhile: LinkedIn (`in.linkedin.com/in/rishabhladha`) and X (`@rishabhladha`, verified).
+The April "no contact form" rule was **reversed by owner decision**. Forms on index.html and contact.html are plain HTML POST (no JS), styled in-system, with a `_honey` honeypot, wired to FormSubmit.co with Rishabh's email: **rishabhladha17@gmail.com** (provided by owner 2026-09-16). **One-time activation still pending:** on the first submission, FormSubmit emails Rishabh a confirmation link he must click once; until then submissions are not delivered. Direct channels shown alongside: email (mailto), LinkedIn (`in.linkedin.com/in/rishabhladha`), X (`@rishabhladha`).
 
 ## Still needs Rishabh (all marked as HTML comments `[CONFIRM with Rishabh: ...]` — never rendered)
 
-- His **email** → both form actions + a contact row (`contact.html`, `index.html` CTA comment)
+- **Form activation**: submit the contact form once, then Rishabh clicks FormSubmit's confirmation link (see Contact section)
 - The **pivot story** (SquadStack→EPIC; his LinkedIn departure post is the source) → `work.html`
 - EPIC day-to-day + any publishing restrictions → `work.html`
 - SquadStack internal numbers + whether to name clients (Kotak/AngelOne/IndiaMART are publicly cited by Founder Thesis) → `work.html`
@@ -79,7 +79,8 @@ Flat index, newest-relevance first. Every entry needs: linked title, source + da
 - [x] Favicon (`favicon.svg`) linked on all pages
 - [x] og:image (absolute URL) on all pages; JSON-LD Person on index
 - [x] Portrait recompressed (95KB → ~43KB)
-- [ ] Rishabh's email → activate both forms (see Contact section above)
+- [x] Rishabh's email (rishabhladha17@gmail.com) wired into forms, mailto links, JSON-LD
+- [ ] Form activation: first submission + Rishabh clicks FormSubmit's confirmation link
 - [ ] Content interview with Rishabh (see "Still needs Rishabh")
 - [ ] Merge branch to `main` to deploy the redesign
 - [ ] Custom domain on Vercel (`rishabhladha.com`)

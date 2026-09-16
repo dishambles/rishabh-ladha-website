@@ -38,12 +38,10 @@
 
     <section class="section" style="padding-top: 56px; display: flex; gap: 72px; flex-wrap: wrap;">
 
-      <!-- Form backend: FormSubmit.co. To activate once Rishabh's email is confirmed:
-           set action="https://formsubmit.co/HIS_EMAIL", submit once, click the confirmation
-           link FormSubmit emails him. Optionally add
-           <input type="hidden" name="_next" value="https://rishabh-ladha-website.vercel.app/contact.html">
-           Until then action="#" (inert). No public email for Rishabh exists — needs his input. -->
-      <form class="contact-form contact-page-form" action="#" method="POST" style="flex: 1 1 380px; max-width: 480px;">
+      <!-- Form backend: FormSubmit.co. One-time activation: on the first submission,
+           FormSubmit emails rishabhladha17@gmail.com a confirmation link — Rishabh must
+           click it once, after which submissions are delivered to his inbox. -->
+      <form class="contact-form contact-page-form" action="https://formsubmit.co/rishabhladha17@gmail.com" method="POST" style="flex: 1 1 380px; max-width: 480px;">
         <label for="name">Your name</label>
         <input id="name" type="text" name="name" placeholder="Your name" required>
         <label for="email">Email</label>
@@ -58,6 +56,10 @@
         <span class="small-caps-label">Or directly</span>
         <div class="contact-list">
           <div class="contact-row">
+            <span class="contact-label">Email</span>
+            <a href="mailto:rishabhladha17@gmail.com" class="contact-value">rishabhladha17@gmail.com</a>
+          </div>
+          <div class="contact-row">
             <span class="contact-label">LinkedIn</span>
             <a href="https://in.linkedin.com/in/rishabhladha" class="contact-value" target="_blank" rel="noopener">in/rishabhladha</a>
           </div>
@@ -65,13 +67,6 @@
             <span class="contact-label">X</span>
             <a href="https://x.com/rishabhladha" class="contact-value" target="_blank" rel="noopener">@rishabhladha</a>
           </div>
-          <!-- [CONFIRM with Rishabh: his email — then add a row here and a mailto link, and
-               wire the form action above to FormSubmit with the same address.]
-          <div class="contact-row">
-            <span class="contact-label">Email</span>
-            <a href="mailto:EMAIL" class="contact-value">EMAIL</a>
-          </div>
-          -->
         </div>
       </div>
 
