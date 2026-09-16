@@ -4,9 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Rishabh Ladha</title>
-  <meta name="description" content="Get in touch with Rishabh Ladha.">
+  <meta name="description" content="Work with Rishabh Ladha — sales assignments, coaching, private workshops for sales teams, and speaking.">
   <meta property="og:title" content="Contact — Rishabh Ladha">
+  <meta property="og:description" content="Sales assignments, coaching, workshops, and speaking.">
+  <meta property="og:image" content="https://rishabh-ladha-website.vercel.app/assets/images/rishabh-portrait.jpg">
   <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -18,42 +24,64 @@
         <li><a href="work.html">Work</a></li>
         <li><a href="teaching.html">Teaching</a></li>
         <li><a href="in-the-wild.html">In the Wild</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="active nav-cta">Work with me &rarr;</a></li>
       </ul>
     </nav>
 
-    <!-- Page heading -->
-    <section style="padding-bottom: 64px;">
-      <h1>Contact</h1>
-      <p style="margin-top: 20px; font-size: 1.05rem; line-height: 1.75; max-width: 520px;">
-        Best way to reach me is email. I reply to specific questions faster than open-ended hellos. If you're a founder figuring out GTM, a student thinking about sales as a career, or a conference organizer — happy to hear from you.
+    <section class="page-heading">
+      <span class="kicker">Contact</span>
+      <h1>Bring me your<br>sales problem.</h1>
+      <p class="standfirst muted" style="margin-top: 24px; max-width: 32em;">
+        A stalled funnel, a team that won&rsquo;t close, a playbook that only works when you run it. If you&rsquo;re a founder figuring out GTM, a sales leader building a team, or an organizer looking for a speaker &mdash; happy to hear from you. I reply to specific questions faster than open-ended hellos.
       </p>
     </section>
 
-    <!-- Contact items -->
-    <section class="contact-section">
-      <div class="contact-item">
-        <span class="contact-label">Email</span>
-        <a href="mailto:[CONFIRM: email address]" class="contact-value">[CONFIRM: email address]</a>
+    <section class="section" style="padding-top: 56px; display: flex; gap: 72px; flex-wrap: wrap;">
+
+      <!-- Form backend: FormSubmit.co. To activate once Rishabh's email is confirmed:
+           set action="https://formsubmit.co/HIS_EMAIL", submit once, click the confirmation
+           link FormSubmit emails him. Optionally add
+           <input type="hidden" name="_next" value="https://rishabh-ladha-website.vercel.app/contact.html">
+           Until then action="#" (inert). No public email for Rishabh exists — needs his input. -->
+      <form class="contact-form contact-page-form" action="#" method="POST" style="flex: 1 1 380px; max-width: 480px;">
+        <label for="name">Your name</label>
+        <input id="name" type="text" name="name" placeholder="Your name" required>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Email" required>
+        <label for="message">What do you need?</label>
+        <textarea id="message" name="message" placeholder="What do you need? The more specific, the faster the reply." required></textarea>
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <button type="submit">Send</button>
+      </form>
+
+      <div style="flex: 1 1 320px;">
+        <span class="small-caps-label">Or directly</span>
+        <div class="contact-list">
+          <div class="contact-row">
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://in.linkedin.com/in/rishabhladha" class="contact-value" target="_blank" rel="noopener">in/rishabhladha</a>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">X</span>
+            <a href="https://x.com/rishabhladha" class="contact-value" target="_blank" rel="noopener">@rishabhladha</a>
+          </div>
+          <!-- [CONFIRM with Rishabh: his email — then add a row here and a mailto link, and
+               wire the form action above to FormSubmit with the same address.]
+          <div class="contact-row">
+            <span class="contact-label">Email</span>
+            <a href="mailto:EMAIL" class="contact-value">EMAIL</a>
+          </div>
+          -->
+        </div>
       </div>
 
-      <div class="contact-item">
-        <span class="contact-label">LinkedIn</span>
-        <a href="https://in.linkedin.com/in/rishabhladha" class="contact-value" target="_blank" rel="noopener">in/rishabhladha</a>
-      </div>
-
-      <!-- Uncomment if Twitter/X is active
-      <div class="contact-item">
-        <span class="contact-label">Twitter</span>
-        <a href="[CONFIRM: Twitter URL]" class="contact-value" target="_blank" rel="noopener">@[CONFIRM]</a>
-      </div>
-      -->
     </section>
 
     <footer>
-      <p class="footer-copy">© 2026 Rishabh Ladha</p>
+      <p>&copy; 2026 Rishabh Ladha</p>
       <ul class="footer-links">
         <li><a href="https://in.linkedin.com/in/rishabhladha" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://x.com/rishabhladha" target="_blank" rel="noopener">X</a></li>
       </ul>
     </footer>
 
