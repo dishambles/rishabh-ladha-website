@@ -1,116 +1,108 @@
 # Rishabh Ladha Personal Website
 
-Personal credibility-anchor site for Rishabh Ladha — Head of GTM at EPIC World, co-founder of SquadStack, sales educator.
+Personal-brand site for Rishabh Ladha — positioned as **one of India's leading sales experts and coaches** (note the article: "one of India's leading", never "India's leading" — the definite superlative has no third-party backing and was deliberately rejected). Co-founder of SquadStack, sales educator at Mesa School of Business and Scaler, takes on sales assignments, coaching, and private workshops. EPIC World (his current day job, Head of GTM) is **deliberately underplayed** — one credential line, one short Work section — by owner decision on 2026-09-16.
 
 ## What this site is
 
-A 4-page static site. Primary job: answer "who is this person, why should I care?" in under 30 seconds for a founder or conference organizer. Not a content hub, not a lead-gen machine.
+A 5-page static site. Primary jobs: (1) answer "who is this person, why should I care?" for founders, sales leaders, and conference organizers; (2) convert serious inbound into contact-form submissions ("Work with me"). Branding page first, light lead capture second.
 
 ## Stack
 
-Plain HTML + CSS. No JavaScript, no framework, no build step.
+Plain HTML + CSS. No JavaScript (the only `<script>` is JSON-LD structured data on index.html). No framework, no build step.
 
-- `index.html` — Home
-- `work.html` — Work (EPIC World + SquadStack)
-- `teaching.html` — Teaching (Masters' Union / Mesa + Scaler)
-- `in-the-wild.html` — Podcasts, talks, writing
-- `contact.html` — Contact
+- `index.html` — Home (hero, proof figures, three offers, pull quote, appearances index, CTA + form)
+- `work.html` — SquadStack (the proof), EPIC World (brief), "what carried over"
+- `teaching.html` — Mesa School of Business, Scaler, private workshops
+- `in-the-wild.html` — Podcasts/keynotes/talks, each with a one-line argument
+- `contact.html` — Form + direct links
 - `styles/main.css` — All styles
-- `assets/images/` — Portrait and any contextual photos
-- `assets/fonts/` — Self-hosted fonts (if moved off Google Fonts CDN)
+- `favicon.svg` — RL monogram (ink square, paper letters, red underline)
+- `assets/images/rishabh-portrait.jpg` — 884×822, recompressed to ~43KB
 
-## Design decisions
+## Design system — "Bold Editorial" (chosen by owner 2026-09-16, replacing the April 2026 warm-minimal system)
 
-**Typography:**
-- Headlines: EB Garamond (Google Fonts CDN), serif
-- Body: Inter (Google Fonts CDN), sans-serif
-- Move to self-hosted if privacy/speed becomes a concern
+**Typography (Google Fonts CDN):**
+- Display: Libre Caslon Display (regular only)
+- Reading serif: Libre Caslon Text
+- UI/body sans: Archivo
 
-**Colors:**
-- Background: `#FAFAF7`
-- Primary text: `#1A1A1A`
-- Secondary text: `#666666`
-- Accent: `#2D4A3E` (deep forest green)
-- Dividers/subtle backgrounds: `#E8E7E3` / `#EFEEEA` / `#F2F1ED`
+**Colors (CSS custom properties in `:root`):**
+- Paper: `#FBFAF5` · Ink: `#161511` · Ink-soft: `#55534B` · Ink-faint: `#8A877D`
+- Editorial red (accent): `#B3261E` (hover `#8C1D17`) · Hairline: `#D8D5CA`
 
-**Layout:**
-- Single column, max content width 680px
-- No JavaScript, no animations, no parallax
-- Hover states only: subtle underline/color shift on links
+**Layout language:** masthead nav with 3px ink rule; huge Caslon display headlines; 3px/1px ink rules as section dividers; figures (stat) band; numbered "No. 1/2/3" offer columns; hairline index lists; centered pull quotes between double rules; full-bleed ink CTA block with the form. Max width 1100px, 24px gutters. No animations; hover color shifts only.
 
-**Tone:**
-- ~80% substance, ~20% personality
-- One "raised eyebrow" moment in the hero tagline — nowhere else
-- Copy is a provocation to react to, not final
+**Tone:** confident editorial, claim-then-proof. The one personality flourish is the hero ("Selling, taught by someone who's done it."). Copy is still a draft for Rishabh to react to.
 
-## Deployment (live as of 2026-04-22)
+## Fact discipline (verified 2026-09-16 — keep these exact framings)
 
-- **Vercel**: https://rishabh-ladha-website.vercel.app (production, auto-deploys on push to `main`)
+- Funding: "over ₹200Cr ($24M+) … Series B led by Bertelsmann India Investments, with Chiratae Ventures, Blume Ventures **and others**" (Tracxn total $24.9M, 16 investors).
+- Forbes: "**founding team** featured in Forbes 30 Under 30 **Asia 2018** (Enterprise Technology)" — never a solo personal claim (honoree list unverified).
+- Scale: "10,000+ telecallers across 67 cities" and "one of India's largest tech-enabled telesales platforms" — NOT "the leading" (self-description only).
+- Mesa: standalone practitioner-led B-school in Bangalore. **NOT part of Masters' Union** (the April site's framing was wrong). Audited outcome: **2.8× average** salary jump (never the 5.2× upper bound). Rishabh is adjunct/visiting faculty.
+- EPIC/EHI: "~250M entrepreneurial households transacting up to $10 trillion a year"; "$100 trillion" is a **20-year projection**, never a present-day figure. EHI Index: 34 companies, ~$115Bn combined market cap **at launch (Feb 2025)**, with Morningstar Indexes.
+- Tenures: SquadStack "2015–2024 / nine years" (end date publicly fuzzy — his departure post is ~April 2025); "eleven years on the revenue side" = whole career including EPIC. Don't state an EPIC join year.
+- ICMA talk was **Vienna 2018** (not 2021). Elets keynote title is "Transforming Sales with Better CX in 2024".
+
+## Contact & lead capture (rule reversed 2026-09-16)
+
+The April "no contact form" rule was **reversed by owner decision**. Forms on index.html and contact.html are plain HTML POST (no JS), styled in-system, with a `_honey` honeypot. **They are inert (`action="#"`) until Rishabh's email is confirmed** — no public email exists anywhere (verified). To activate: set `action="https://formsubmit.co/HIS_EMAIL"` on both forms, submit once, click FormSubmit's confirmation link. Direct channels shown meanwhile: LinkedIn (`in.linkedin.com/in/rishabhladha`) and X (`@rishabhladha`, verified).
+
+## Still needs Rishabh (all marked as HTML comments `[CONFIRM with Rishabh: ...]` — never rendered)
+
+- His **email** → both form actions + a contact row (`contact.html`, `index.html` CTA comment)
+- The **pivot story** (SquadStack→EPIC; his LinkedIn departure post is the source) → `work.html`
+- EPIC day-to-day + any publishing restrictions → `work.html`
+- SquadStack internal numbers + whether to name clients (Kotak/AngelOne/IndiaMART are publicly cited by Founder Thesis) → `work.html`
+- 3 mental models → `work.html` "What carried over"
+- Mesa course name/format; Scaler module name/format and whether current → `teaching.html`
+- Sign-off on the private-workshops offer (now core to positioning) → `teaching.html`
+- Converge'26 panel (Feb 7 2026, 3one4 Capital, Bengaluru) — add to `in-the-wild.html` when a recording/summary is published
+
+## Updating "In the Wild"
+
+Flat index, newest-relevance first. Every entry needs: linked title, source + date meta, one-line argument (no argument → no entry). Max ~12–15 entries. All current links are real and were found via research on 2026-09-16; the Offline Network entry links to the show's guests page (no per-episode URL public), and the Mesa video's date is unconfirmed (no date shown).
+
+## Deployment
+
+- **Vercel**: https://rishabh-ladha-website.vercel.app — production auto-deploys on push to `main`. The redesign lives on branch `claude/beautiful-planck-73fym2` until merged.
 - **GitHub**: https://github.com/dishambles/rishabh-ladha-website
-- **Vercel project**: `rishabh-ladha-website` under `dishambles-projects` scope
-- **Custom domain**: not yet configured — target `rishabhladha.com` (confirm with Rishabh)
+- Vercel project is under Disha's `dishambles-projects` scope (transfer to Rishabh is a Vercel project-transfer operation if ever needed).
+- Custom domain not configured — target `rishabhladha.com` (confirm with Rishabh).
+- The PRD file referenced by earlier docs (`rishabh-ladha-website-prd.md`) was never committed and does not exist in the repo.
+
+## Pre-launch checklist
+
+- [x] Full redesign in the chosen "Bold Editorial" direction (all 5 pages)
+- [x] All In the Wild links real (no `#` links anywhere)
+- [x] No `[CONFIRM]` text renders publicly (all moved into HTML comments)
+- [x] Favicon (`favicon.svg`) linked on all pages
+- [x] og:image (absolute URL) on all pages; JSON-LD Person on index
+- [x] Portrait recompressed (95KB → ~43KB)
+- [ ] Rishabh's email → activate both forms (see Contact section above)
+- [ ] Content interview with Rishabh (see "Still needs Rishabh")
+- [ ] Merge branch to `main` to deploy the redesign
+- [ ] Custom domain on Vercel (`rishabhladha.com`)
+- [ ] Add URL to Rishabh's LinkedIn headline and speaker bios after launch
+
+Do NOT do a launch announcement post — it should feel like it's always been there.
+
+## What not to change
+
+- Do not add JavaScript beyond the JSON-LD block (no analytics, no widgets) without a specific, necessary reason
+- Do not add animations or scroll effects
+- Do not add a blog or newsletter signup
+- Do not use stock images or photos without rights
+- Do not write "India's leading sales expert" (definite article) or any unhedged superlative — "one of India's leading…" stacked on the proof figures is the ceiling
+- Do not present the $100T figure as current, the 5.2× salary jump, Mesa as Masters' Union, or Forbes 30U30 as a solo honor (see Fact discipline)
 
 ## Session history
 
 ### 2026-04-22 — Initial build + deploy
-- Built all 5 pages from scratch (index, work, teaching, in-the-wild, contact)
-- Full CSS design system in `styles/main.css`
-- Portrait photo added (`assets/images/rishabh-portrait.jpg`) — SquadStack headshot, black polo, neutral background
-- Git repo initialized, GitHub repo created (public, under dishambles account), Vercel linked and deployed to production
-- All `[CONFIRM: ...]` placeholders still intact — content interview with Rishabh pending
+Built 5 pages (warm-minimal system, EB Garamond/Inter), deployed to Vercel, portrait added. Shipped with ~30 rendered `[CONFIRM]` placeholders and all In-the-Wild links dead.
 
-## Content status
-
-Portrait photo: **done** — `assets/images/rishabh-portrait.jpg` wired into `index.html` hero.
-
-All other `[CONFIRM: ...]` markers in the HTML files need Rishabh's input before the site is fully launch-ready. Do not remove markers without actual confirmed content.
-
-**Critical blockers (site reads thin without these):**
-- Rishabh's actual email address → `contact.html`, `index.html`
-- The pivot story (why he left SquadStack for EPIC) → `work.html` pivot bridge
-- EPIC role specifics (what Head of GTM means day-to-day) → `work.html`
-- SquadStack numbers (revenue, team size, representative deals) → `work.html`
-- Mesa course name and what he teaches → `teaching.html`
-- Scaler program name/module and what he teaches → `teaching.html`
-
-**Important (improves quality):**
-- 3 "what I'm thinking about" statements → `index.html` (drafts exist, need Rishabh's sign-off)
-- 3 mental models from SquadStack → `work.html`
-- Which hero tagline variant he prefers → `index.html` h1
-- Does he want the "private workshops" CTA on Teaching? → `teaching.html`
-- Does EPIC have restrictions on what he can publish about his role?
-- Actual URLs for all In the Wild entries (currently all `#`) → `in-the-wild.html`
-
-## Updating "In the Wild"
-
-After each new podcast or talk: add a new `.wild-entry` block in the appropriate theme section of `in-the-wild.html`. Every entry needs:
-1. Source name and date (`.wild-source`)
-2. Title with link (`.wild-title`)
-3. One-line argument (`.wild-argument`) — if you can't write this, the entry doesn't go in
-
-Max ~12–15 entries total. Be ruthless.
-
-## Pre-launch checklist
-
-- [ ] All `[CONFIRM: ...]` placeholders filled (see Content status above)
-- [x] Portrait photo added and wired into index.html
-- [ ] Every page tested on mobile (read it top to bottom, cut anything that doesn't earn its space)
-- [ ] Meta og:image filled on all pages (currently only index.html has it)
-- [ ] Favicon added (RL monogram in `#2D4A3E`)
-- [ ] Custom domain configured on Vercel (`rishabhladha.com`)
-- [ ] Add URL to Rishabh's LinkedIn headline and speaker bios after launch
-
-Do NOT do a launch announcement post. This is a credibility anchor — it should feel like it's always been there.
-
-## What not to change
-
-- Do not add JavaScript unless there's a specific, necessary reason
-- Do not add animations or scroll effects
-- Do not add a blog, newsletter signup, or booking form
-- Do not add a contact form (unnecessary friction)
-- Do not use any stock images
-- Do not add more personality moments in the copy beyond the hero tagline
-
-## Reference PRD
-
-Full PRD lives in `rishabh-ladha-website-prd.md` in this directory. Contains design reference links, content rationale, and open questions in detail.
+### 2026-09-16 — Repositioning + full redesign + research fill
+- Deep research pass: found real URLs/dates for all appearances (corrections: ICMA was Vienna 2018; GTMDialogues was Mar 22 2025; Elets title), found new appearances (Mesa video, Offline Network, Converge'26), verified/corrected every load-bearing claim (see Fact discipline), confirmed X handle, confirmed no public email.
+- Owner decisions: reposition around "a leading sales expert in the country" (hedged form used), underplay EPIC, full redesign with mockups first, add contact form (rule reversal).
+- Three design directions mocked on a canvas; owner chose "Bold Editorial".
+- Rebuilt all 5 pages + CSS in the new system; favicon, og:images, JSON-LD, portrait optimization; deleted stale HANDOFF.md.
