@@ -218,7 +218,7 @@ html.js [data-words].is-in .w{opacity:1;transform:none;filter:none}
 .chain{list-style:none;margin:clamp(22px,3vw,40px) 0 0;padding:0;max-width:440px;border-top:1px solid var(--black)}
 .chain li{display:grid;grid-template-columns:36px minmax(0,1fr);align-items:baseline;padding-block:clamp(9px,1vw,13px);border-bottom:1px solid var(--rule);font-size:clamp(16px,1.4vw,21px);font-weight:800;text-transform:uppercase;letter-spacing:-.005em;line-height:1.1}
 .chain li span{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--acid)}
-.glyph{display:inline-grid;place-items:center;width:clamp(44px,5vw,78px);aspect-ratio:1;border:1px solid #b9b9b9;color:#c2c2c2;font-weight:800;font-size:clamp(24px,3vw,46px);line-height:1}
+.glyph{display:inline-grid;place-items:center;flex:none;width:clamp(34px,3.2vw,48px);aspect-ratio:1;background:var(--acid);color:var(--on-acid);font-weight:800;font-size:clamp(19px,1.9vw,28px);line-height:1}
 
 /* ---- figures ---- */
 .figs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule)}
@@ -248,6 +248,10 @@ html.js [data-words].is-in .w{opacity:1;transform:none;filter:none}
 
 /* ---- wild rows ---- */
 .rows{border-top:1px solid var(--black)}
+/* what we do: human-led | systems + human-led, three offerings each */
+.offer{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,72px);margin-top:clamp(28px,4vw,56px)}
+.offer__h{margin-bottom:14px;color:var(--acid)}
+@media(max-width:899px){.offer{grid-template-columns:1fr}}
 .row{display:block;border-bottom:1px solid var(--rule);padding:clamp(18px,2.2vw,30px) clamp(14px,2vw,28px);margin-inline:calc(-1 * clamp(14px,2vw,28px));transition:background .35s var(--ease),color .35s var(--ease)}
 .row__t{display:flex;gap:clamp(12px,2vw,28px);align-items:baseline}
 .row__n{font-weight:800;font-size:12px;letter-spacing:.1em;color:var(--quiet);flex:none;padding-top:.5em}
@@ -271,9 +275,11 @@ html.js [data-words].is-in .w{opacity:1;transform:none;filter:none}
 .form{display:flex;flex-direction:column;gap:clamp(18px,2vw,26px)}
 .f{display:flex;flex-direction:column;gap:8px}
 .f label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f}
-.f input,.f textarea{font-family:inherit;font-size:clamp(15px,1.2vw,18px);color:var(--paper);background:none;border:0;border-bottom:1px solid #4a4a4a;padding:8px 0;transition:border-color .25s var(--ease)}
+.f input,.f textarea,.f select{font-family:inherit;font-size:clamp(15px,1.2vw,18px);color:var(--paper);background:none;border:0;border-bottom:1px solid #4a4a4a;padding:8px 0;transition:border-color .25s var(--ease)}
 .f textarea{min-height:88px;resize:vertical}
-.f input:focus,.f textarea:focus{border-bottom-color:var(--acid-lit);outline:0}
+.f select{appearance:none;-webkit-appearance:none;border-radius:0;cursor:pointer}
+.f select option{color:var(--black)}
+.f input:focus,.f textarea:focus,.f select:focus{border-bottom-color:var(--acid-lit);outline:0}
 .f ::placeholder{color:#6a6a6a}
 .form button{align-self:flex-start;font-family:inherit;font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:14px;padding:14px 28px;border:0;background:var(--acid);color:var(--on-acid);cursor:pointer;transition:transform .25s var(--ease)}
 .form button:hover{transform:translateY(-2px)}

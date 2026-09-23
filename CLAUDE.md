@@ -4,41 +4,39 @@ Personal-brand site for Rishabh Ladha — positioned as **one of India's leading
 
 ## What this site is
 
-A single-page, long-scroll site (redesigned 2026-09-23, replacing the earlier 5-page "Bold Editorial" system). Primary jobs: (1) answer "who is this person, why should I care?" for founders, sales leaders, and conference organizers; (2) convert serious inbound into contact-form submissions ("Work with me"). Branding page first, light lead capture second.
+A single-page, long-scroll site (redesigned 2026-09-23, replacing the earlier 5-page "Bold Editorial" system), plus one separate `resources/` page. Primary jobs: (1) answer "who is this person, why should I care?" for founders, sales leaders, and conference organizers; (2) convert serious inbound into contact-form submissions ("Work with me"). Branding page first, light lead capture second.
 
 ## Stack
 
 Plain HTML + CSS + vanilla JS. No framework, no build step, no dependencies.
 
-- `index.html` — the entire site, organised into 9 numbered chapters (see below) plus a hero and full-bleed interludes
+- `index.html` — the main page, organised into 6 numbered chapters (see below) plus a hero, one full-bleed interlude and a photo strip
+- `resources/index.html` — Resources page (off the main scroll): coming-soon grid with request access, talks & podcasts, request-access form. Uses `../` relative paths to the shared CSS/JS/assets
 - `styles/site.css` — all styles, design tokens in `:root`
 - `js/motion.js` — all behaviour: scroll reveals, word-splitting, counters, parallax, dot-rail/nav sync, custom cursor
 - `favicon.svg` — RL monogram (ink square, paper letters, red underline)
-- `assets/images/` — `rishabh-portrait.jpg` (884×822 source), `portrait-cutout.png` (transparent B&W-ready cutout used in the hero), plus event photos: `gtmdialogues-talk.jpg`, `gtmdialogues-room.jpg`, `classroom-session.jpg`, `mesa-panel.jpg`, `award-onbfsi.jpg`, `keynote-bfsi-cxo.jpg` (now unused); `assets/images/logos/` holds the client logos `orange-health.svg`, `equitylist.svg`, `tenjin.svg` — each company's own file from its website, rendered solid black via `.logos img{filter:brightness(0)}`
-- `vercel.json` — 301 redirects from the old page paths (`/work`, `/teaching`, `/in-the-wild`, `/contact`, and their `.html` forms) to the matching in-page `#anchor`
+- `assets/images/` — `rishabh-portrait.jpg` (884×822 source), `portrait-cutout.png` (transparent B&W-ready cutout used in the hero), event photos in use: `gtmdialogues-talk.jpg`, `gtmdialogues-room.jpg`, `award-onbfsi.jpg`, and the Orange Health training shots `orange-health-training.jpg` + `orange-health-team.jpg` (from Disha's `~/Downloads/Website images`, IMG_0444/IMG_1730, EXIF-rotated, 1600px, metadata stripped). Unused: `classroom-session.jpg`, `mesa-panel.jpg` (owner: not actually Mesa), `keynote-bfsi-cxo.jpg`; `assets/images/logos/` holds the client logos `orange-health.svg`, `equitylist.svg`, `tenjin.svg` — each company's own file from its website, rendered solid black via `.logos img{filter:brightness(0)}`
+- `vercel.json` — permanent redirects from the old page paths: `/work` and `/teaching` → `/#work`, `/in-the-wild` → `/resources/#talks`, `/contact` → `/#contact` (plus `.html` forms)
 
 ## Page structure (top to bottom)
 
-The page follows a narrative spine (owner decision 2026-09-23): **insight → alternatives → the system (ideal outcome) → what we do (solution) → proof & credibility → contact.** Credibility deliberately comes *after* the story, not straight after the hero.
+The page follows a narrative spine (owner decision 2026-09-23): **insight → alternatives → the system (ideal outcome) → what we do (solution) → track record → contact.** Credibility deliberately comes *after* the story, not straight after the hero.
 
 | # | id | Chapter |
 |---|---|---|
-| — | `#home` | Hero — "Improving sales talent in India", chain previewing the system, lead "I build sales programs around your team, then stay on to keep improving them.", credentials, CTA, B&W cutout with animated cobalt halo |
-| 01 | `#insight` | The insight — "Why does the world's best tennis player still have a coach?" + "Every seller needs a coach" |
-| 02 | `#alternatives` | The usual fixes don't stick — template playbooks, one-and-done training, no feedback loop (`.phases--3`) |
-| 03 | `#system` | The system — "We build the system around your team, and improve it with you." Four parts in active voice (`.phases`) |
-| — | `.interlude` | Full-bleed photo (GTM Dialogues room) |
-| 04 | `#what-we-do` | What we do — "The future of sales enablement": 6 offerings as `.rows` by audience, each linking to `#contact` |
-| — | `.slab` | Pull quote (black slab) |
-| 05 | `#brands` | Worked with — roster: Built, SquadStack clients, Teaches at, Stages, Listed in |
-| 06 | `#said` | Said about him — testimonial ticker (6 real LinkedIn posts, quoted + linked) |
-| — | `.strip` | Photo strip (4 greyscale event photos) |
-| 07 | `#work` | Track record — "Where the system already runs.": figures (2.8× + 3 placeholders), Mesa (`id="teaching"` so the `/teaching` redirect lands), Scaler, Sales teams trained (logos), Founder sessions, Where it started (SquadStack + EPIC in one entry) |
-| — | `.interlude` | Full-bleed photo (ON BFSI award) |
-| 08 | `#wild` | In the wild — podcasts/talks index |
-| 09 | `#contact` | Work with me — About merged in (portrait + name + positioning line in `.sig`), black end block, FormSubmit contact form |
+| — | `#home` | Hero — "Improving sales talent in India", chain previewing the system (context · expert · AI loop), lead "I build sales programs around your team, then stay on to keep improving them.", credentials, CTA, B&W cutout with animated cobalt halo |
+| 01 | `#insight` | The insight — cobalt `?` tag + "Why does the world's best tennis player still have a coach?" + "Every seller needs a coach" |
+| 02 | `#alternatives` | "The usual sales enablement fixes don't stick." (one line, `.stmt-md`) — template playbooks, one-and-done training, no feedback loop (`.phases--3`) |
+| 03 | `#system` | The ideal outcome, not a pitch: "Sales enablement systems need to be built around your team and improved with you, with humans in the loop." Four parts in owner's order: context → sales expert → AI learning loop → continuous monitoring |
+| — | `.interlude` | Full-bleed photo (GTM Dialogues room), caption only |
+| 04 | `#what-we-do` | "The future of sales enablement." Two groups of three (`.offer`): **Human-led** — college classrooms, enterprise sales, leadership coaching; **Systems + human-led** — GTM systems, agents, learning modules. Each row links to `#contact` |
+| 05 | `#work` | Track record — roster (Built: SquadStack, EPIC World · Teaches at: Mesa, Scaler School of Business · Trained teams at: Orange Health / EquityList / Tenjin logos · Stages · Listed in: Forbes) + "In their words." testimonial ticker |
+| — | `.strip` | Photo strip (GTM Dialogues talk, 2× Orange Health training, ON BFSI award) |
+| 06 | `#contact` | Work with me — About merged in (portrait + name + positioning line in `.sig`), black end block, FormSubmit contact form |
 
-**Voice:** "we" for the system and offerings; "I" for the hero lead, Track record and Work with me. Owner asked for **active voice and flowing sentences, not staccato fragments** — write new copy that way.
+Removed 2026-09-23 on owner feedback: the "Founder-led sales is a phase" pull quote, the SquadStack clients row, the "Where the system already runs" section (figures, Mesa/Scaler/founder entries), the award interlude (its photo is in the strip), and "In the wild" (moved to `resources/`).
+
+**Voice:** "we" only in What we do; the system chapter is written as the ideal outcome, not "we"; "I" for the hero lead and Work with me. Owner's copy rules: **active voice, flowing sentences (not staccato fragments), less text, and no AI-sounding "we do X, not Y" / "X, not Y" contrasts.**
 
 **Story guardrails:** workshops appear only as the kickoff of a program, never as a standalone offer (the page argues against one-and-done training); every AI mention carries its human expert (the page argues AI alone isn't enough); nothing may promise the team will run "without us" (the system is continuous monitoring).
 
@@ -77,9 +75,11 @@ Fixed UI: top nav (links to every chapter, active link underlined) + left dot ra
 - The AI learning loop is not a product: it is built for each company inside a one-on-one engagement. Copy must say "for each engagement", never imply a standalone AI tool.
 - All six offerings in `#what-we-do` are live; all are consulting engagements (the page doesn't need to say so). "We" stays for now.
 - Mesa course: **B2B Sales**. Scaler course: **B2B Sales**. EPIC has no publishing restrictions.
-- SquadStack clients that can be named (roster row in `#brands`): **Kotak, AngelOne, IndiaMART**.
-- Sales teams Rishabh has trained (past engagements, shown with logos in `#work`): **Orange Health, EquityList, Tenjin** (assumed tenjin.com, the mobile marketing analytics company; confirm).
-- Working copy for the whole page lives in the shared doc "Website content: draft for Rishabh's markup" (https://claude.ai/code/artifact/3b477d7a-8729-4c9e-b763-05c06e040be9). Applied to `index.html` on 2026-09-23 at doc rev 30; later doc edits need re-applying.
+- SquadStack clients Kotak, AngelOne, IndiaMART were cleared to name, then the row was removed by owner choice (2026-09-23).
+- Sales teams Rishabh has trained (past engagements, shown with logos in `#work`): **Orange Health, EquityList, Tenjin** (tenjin.com, the mobile marketing analytics company — owner confirmed).
+- Working copy for the whole page lives in the shared doc "Website content: draft for Rishabh's markup" (https://claude.ai/code/artifact/3b477d7a-8729-4c9e-b763-05c06e040be9). Applied to `index.html` on 2026-09-23 at doc rev 30. **The site has since moved on (round 3 feedback applied directly), so the doc is stale — `index.html` is now the source of truth.**
+
+
 ## Contact & lead capture
 
 Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-system, with a `_honey` honeypot, wired to FormSubmit.co with Rishabh's email: **rishabhladha17@gmail.com**. **One-time activation still pending:** on the first submission, FormSubmit emails Rishabh a confirmation link he must click once; until then submissions are not delivered. Direct channels shown alongside: email (mailto), LinkedIn (`in.linkedin.com/in/rishabhladha`), X (`@rishabhladha`).
@@ -87,9 +87,10 @@ Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-s
 ## Still needs Rishabh (all marked as HTML comments `[CONFIRM with Rishabh: ...]` / `[PASTE ...]` in `index.html` — never rendered)
 
 - **Form activation**: submit the contact form once, then Rishabh clicks FormSubmit's confirmation link.
-- **Parked (Disha will collect later):** 2–3 testimonials from founders or sales leaders — `#said`.
-- **Parked:** figures for students taught, sellers and founders coached, sales teams trained — render as "—" in `#work` until supplied; fill or remove before launch.
-- Converge'26 panel (Feb 7 2026, 3one4 Capital, Bengaluru) — add to `#wild` when a recording/summary is published.
+- **Parked (Disha will collect later):** 2–3 testimonials from founders or sales leaders — `#work` ticker.
+- Testimonial headline "In their words." is a pick from options offered 2026-09-23 — owner may swap it.
+- Converge'26 panel (Feb 7 2026, 3one4 Capital, Bengaluru) — add to `resources/` Talks & podcasts when a recording/summary is published.
+- Resources page items are all "coming soon" with request access (FormSubmit, `_subject` "Resource access request").
 
 ## Deployment
 
@@ -97,17 +98,16 @@ Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-s
 - **GitHub**: https://github.com/dishambles/rishabh-ladha-website
 - Vercel project is under Disha's `dishambles-projects` scope (transfer to Rishabh is a Vercel project-transfer operation if ever needed).
 - Custom domain not configured — target `rishabhladha.com` (confirm with Rishabh).
-- `vercel.json` redirects the four old page paths (extension-less and `.html`) to in-page anchors, so any external links (LinkedIn headline, speaker bios, search results) into the old multi-page site keep working.
+- `vercel.json` redirects the four old page paths (extension-less and `.html`), so any external links (LinkedIn headline, speaker bios, search results) into the old multi-page site keep working.
 
 ## Pre-launch checklist
 
-- [x] One-page long-scroll redesign implemented (hero, 9 numbered chapters, interludes, motion)
+- [x] One-page long-scroll redesign implemented (hero, 6 numbered chapters, interlude, strip, motion) + `resources/` page
 - [x] Old sub-pages removed; redirects to in-page anchors added (`vercel.json`)
 - [x] No `[CONFIRM]`/`[PASTE]` text renders publicly (all moved into HTML comments)
 - [x] Favicon, og:image (absolute URL), JSON-LD Person on index
 - [x] Rishabh's email wired into form, mailto links, JSON-LD
-- [ ] Replace or remove the three "—" placeholder figures in `#work`
-- [ ] Quick OK from Orange Health, EquityList and Tenjin to show their logos
+- [ ] Quick OK from Orange Health, EquityList and Tenjin to show their logos (and from Orange Health for the two team photos)
 - [x] Real testimonials (6 LinkedIn posts) in the ticker, quoted + linked
 - [ ] Form activation: first submission + Rishabh clicks FormSubmit's confirmation link
 - [ ] Content interview with Rishabh (see "Still needs Rishabh")
@@ -120,7 +120,7 @@ Do NOT do a launch announcement post — it should feel like it's always been th
 
 - Do not add a second accent colour — cobalt (`--acid`) is the only one, by design
 - Do not add border-radius or shadows — square corners everywhere is deliberate
-- Do not add a blog or newsletter signup
+- Do not add a blog or newsletter signup (the owner-requested request-access form on `resources/` is the one exception)
 - Do not use stock images or photos without rights
 - Do not write "India's leading sales expert" (definite article) or any unhedged superlative — "one of India's leading…" stacked on the proof figures is the ceiling
 - Do not present the $100T figure as current, the 5.2× salary jump, Mesa as Masters' Union, (see Fact discipline)
@@ -158,3 +158,9 @@ Built 5 pages (warm-minimal system, EB Garamond/Inter), deployed to Vercel, port
 - Wrote every line of page copy into a shared Claude Doc for markup; Disha marked it up and answered the open questions (see "Owner answers"), then the doc (rev 30) was applied to `index.html`.
 - Insight question → the tennis-coach question (option D of five drafted). System chapter rewritten in active voice. Worked with: "Backed by" dropped, SquadStack clients row added. Track record rebuilt around programs (Mesa, Scaler, Sales teams trained with logos, Founder sessions); SquadStack/EPIC compressed into one "Where it started" entry; funding figures removed. About merged into Contact as `09 Work with me` (nav "About" link and `#who` removed; nothing linked to it). Search + link-preview description switched to the new positioning.
 - Added `.logos` and `.sig` in `site.css`. Downloaded the three client logos (owner-approved) from each company's own site.
+
+### 2026-09-23 — Round 3: owner feedback on the live page
+- Insight `?` glyph restyled from a grey outlined box (read as a missing image) to a solid cobalt tag. Alternatives headline made technically precise and one line. System chapter reframed as the ideal outcome with the owner's own headline and step order; descriptions rewritten to drop AI-sounding contrasts.
+- What we do split 3 + 3 (human-led | systems + human-led) with renamed offerings. Worked with, logos and testimonials merged into one Track record; placeholder figures and program entries removed with it.
+- New `resources/` page: coming-soon grid with request access, the seven talks/podcasts moved off the main page, request-access form. `/in-the-wild` now redirects there; `/teaching` → `/#work`.
+- Two Orange Health training photos replace `classroom-session.jpg` and `mesa-panel.jpg` in the strip.
