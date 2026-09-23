@@ -15,7 +15,7 @@ Plain HTML + CSS + vanilla JS. No framework, no build step, no dependencies.
 - `styles/site.css` — all styles, design tokens in `:root`
 - `js/motion.js` — all behaviour: scroll reveals, word-splitting, counters, parallax, dot-rail/nav sync, custom cursor
 - `favicon.svg` — RL monogram (ink square, paper letters, red underline)
-- `assets/images/` — `rishabh-portrait.jpg` (884×822 source), `portrait-cutout.png` (transparent B&W-ready cutout used in the hero), event photos in use: `gtmdialogues-talk.jpg`, `gtmdialogues-room.jpg`, `award-onbfsi.jpg`, and the Orange Health training shots `orange-health-training.jpg` + `orange-health-team.jpg` (from Disha's `~/Downloads/Website images`, IMG_0444/IMG_1730, EXIF-rotated, 1600px, metadata stripped). Unused: `classroom-session.jpg`, `mesa-panel.jpg` (owner: not actually Mesa), `keynote-bfsi-cxo.jpg`; `assets/images/logos/` holds the client logos `orange-health.svg`, `equitylist.svg`, `tenjin.svg` — each company's own file from its website, rendered solid black via `.logos img{filter:brightness(0)}`
+- `assets/images/` — `rishabh-portrait.jpg` (884×822 source), `portrait-cutout.png` (transparent B&W-ready cutout used in the hero). Photos (all from Disha's `~/Downloads/Website images`, EXIF-rotated, ≤1600px, metadata stripped where converted) and where they're used: `orange-health-training.jpg` (insight, beside the copy, captioned Orange Health · Sales team training), `class-group.jpg` (IMG_1473, class group photo — What we do, human-led column; source class not specified, so no caption), `rishabh-at-work.jpg` (IMG_6675, at his desk — What we do, systems column), `gtmdialogues-room.jpg` (interlude after the system), strip: `gtmdialogues-talk.jpg`, `keynote-bfsi-cxo.jpg`, `orange-health-team.jpg`, `award-onbfsi.jpg`; `gtmdialogues-group.jpg` (resources page interlude). Unused: `classroom-session.jpg`, `mesa-panel.jpg` (owner: not actually Mesa). `assets/images/logos/` holds the client logos `orange-health.svg`, `equitylist.svg`, `tenjin.svg` — each company's own file from its website, rendered solid black via `.logos img{filter:brightness(0)}`
 - `vercel.json` — permanent redirects from the old page paths: `/work` and `/teaching` → `/#work`, `/in-the-wild` → `/resources/#talks`, `/contact` → `/#contact` (plus `.html` forms)
 
 ## Page structure (top to bottom)
@@ -24,13 +24,13 @@ The page follows a narrative spine (owner decision 2026-09-23): **insight → al
 
 | # | id | Chapter |
 |---|---|---|
-| — | `#home` | Hero — "Improving sales talent in India", chain previewing the system (context · expert · AI loop), lead "I build sales programs around your team, then stay on to keep improving them.", credentials, CTA, B&W cutout with animated cobalt halo |
+| — | `#home` | Hero — "Improving sales talent in India", chain previewing the system (context · expert · AI loop), lead "I build sales programs around your team, then stay on to keep improving them.", one credential (On the revenue side: 11 years — owner wants proof numbers added here, pending his CV), CTA, B&W cutout with animated cobalt halo |
 | 01 | `#insight` | The insight — cobalt `?` tag + "Why does the world's best tennis player still have a coach?" + "Every seller needs a coach" |
 | 02 | `#alternatives` | "The usual sales enablement fixes don't stick." (one line, `.stmt-md`) — template playbooks, one-and-done training, no feedback loop (`.phases--3`) |
 | 03 | `#system` | The ideal outcome, not a pitch: "Sales enablement systems need to be built around your team and improved with you, with humans in the loop." Four parts in owner's order: context → sales expert → AI learning loop → continuous monitoring |
 | — | `.interlude` | Full-bleed photo (GTM Dialogues room), caption only |
 | 04 | `#what-we-do` | "The future of sales enablement." Two groups of three (`.offer`): **Human-led** — college classrooms, enterprise sales, leadership coaching; **Systems + human-led** — GTM systems, agents, learning modules. Each row links to `#contact` |
-| 05 | `#work` | Track record — roster (Built: SquadStack, EPIC World · Teaches at: Mesa, Scaler School of Business · Trained teams at: Orange Health / EquityList / Tenjin logos · Stages · Listed in: Forbes) + "In their words." testimonial ticker |
+| 05 | `#work` | Track record — roster (Work: SquadStack, Elevar Equity, EPIC World · Teaches at: Mesa, Scaler School of Business · Trained teams at: Orange Health / EquityList / Tenjin logos · Stages · Honours: Forbes) + "In their words." testimonial ticker |
 | — | `.strip` | Photo strip (GTM Dialogues talk, 2× Orange Health training, ON BFSI award) |
 | 06 | `#contact` | Work with me — About merged in (portrait + name + positioning line in `.sig`), black end block, FormSubmit contact form |
 
@@ -41,6 +41,8 @@ Removed 2026-09-23 on owner feedback: the "Founder-led sales is a phase" pull qu
 **Story guardrails:** workshops appear only as the kickoff of a program, never as a standalone offer (the page argues against one-and-done training); every AI mention carries its human expert (the page argues AI alone isn't enough); nothing may promise the team will run "without us" (the system is continuous monitoring).
 
 Fixed UI: top nav (links to every chapter, active link underlined) + left dot rail (one dot per chapter, active dot filled cobalt), both driven by `data-chapter` attributes and IntersectionObserver in `motion.js`.
+
+**No visible chapter labels** (owner, 2026-09-23): sections carry no `.chapter-head` eyebrow/number ("01 The insight", "My work", "What teams try instead"…) on either page. The top nav is the only chapter signposting; `data-chapter` stays for the rail/nav. Don't add them back.
 
 ## Design system — one-page long-scroll (chosen by owner 2026-09-23, replacing "Bold Editorial")
 
@@ -74,7 +76,8 @@ Fixed UI: top nav (links to every chapter, active link underlined) + left dot ra
 **Owner answers, 2026-09-23 (content pass):**
 - The AI learning loop is not a product: it is built for each company inside a one-on-one engagement. Copy must say "for each engagement", never imply a standalone AI tool.
 - All six offerings in `#what-we-do` are live; all are consulting engagements (the page doesn't need to say so). "We" stays for now.
-- Mesa course: **B2B Sales**. Scaler course: **B2B Sales**. EPIC has no publishing restrictions.
+- Mesa course: **B2B Sales**. Scaler course: **B2B Sales**. Classroom offering copy (owner, later): B2B sales, marketing and customer success courses for undergraduate and postgraduate students. EPIC has no publishing restrictions.
+- Rishabh's work history on the roster includes **Elevar Equity** (spelled E-L-E-V-A-R) between SquadStack and EPIC World. Roster label is "Honours" for Forbes (owner said "honorary"; "Honours" used — confirm).
 - SquadStack clients Kotak, AngelOne, IndiaMART were cleared to name, then the row was removed by owner choice (2026-09-23).
 - Sales teams Rishabh has trained (past engagements, shown with logos in `#work`): **Orange Health, EquityList, Tenjin** (tenjin.com, the mobile marketing analytics company — owner confirmed).
 - Working copy for the whole page lives in the shared doc "Website content: draft for Rishabh's markup" (https://claude.ai/code/artifact/3b477d7a-8729-4c9e-b763-05c06e040be9). Applied to `index.html` on 2026-09-23 at doc rev 30. **The site has since moved on (round 3 feedback applied directly), so the doc is stale — `index.html` is now the source of truth.**
@@ -90,6 +93,8 @@ Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-s
 - **Parked (Disha will collect later):** 2–3 testimonials from founders or sales leaders — `#work` ticker.
 - Testimonial headline "In their words." is a pick from options offered 2026-09-23 — owner may swap it.
 - Converge'26 panel (Feb 7 2026, 3one4 Capital, Bengaluru) — add to `resources/` Talks & podcasts when a recording/summary is published.
+- **Numbers:** owner wants proof numbers for the hero ("on the revenue side") and possibly program figures; waiting on Rishabh's CV.
+- More photos welcome: current slots are filled (insight, What we do ×2, interlude, strip, resources); unused `classroom-session.jpg`/`mesa-panel.jpg` need their real source before use.
 - Resources page items are all "coming soon" with request access (FormSubmit, `_subject` "Resource access request").
 
 ## Deployment

@@ -251,6 +251,11 @@ html.js [data-words].is-in .w{opacity:1;transform:none;filter:none}
 /* what we do: human-led | systems + human-led, three offerings each */
 .offer{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,72px);margin-top:clamp(28px,4vw,56px)}
 .offer__h{margin-bottom:14px;color:var(--acid)}
+.offer__shot{margin:0 0 clamp(18px,2vw,28px);aspect-ratio:16/9}
+/* insight: copy beside a photo */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);align-items:start;margin-top:clamp(18px,2.4vw,30px)}
+.split__shot{margin:0;aspect-ratio:4/3}
+@media(max-width:899px){.split{grid-template-columns:1fr}}
 @media(max-width:899px){.offer{grid-template-columns:1fr}}
 .row{display:block;border-bottom:1px solid var(--rule);padding:clamp(18px,2.2vw,30px) clamp(14px,2vw,28px);margin-inline:calc(-1 * clamp(14px,2vw,28px));transition:background .35s var(--ease),color .35s var(--ease)}
 .row__t{display:flex;gap:clamp(12px,2vw,28px);align-items:baseline}
