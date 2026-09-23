@@ -1,0 +1,12 @@
+{
+  "redirects": [
+    { "source": "/work", "destination": "/#work", "permanent": true },
+    { "source": "/work.html", "destination": "/#work", "permanent": true },
+    { "source": "/teaching", "destination": "/#teaching", "permanent": true },
+    { "source": "/teaching.html", "destination": "/#teaching", "permanent": true },
+    { "source": "/in-the-wild", "destination": "/#wild", "permanent": true },
+    { "source": "/in-the-wild.html", "destination": "/#wild", "permanent": true },
+    { "source": "/contact", "destination": "/#contact", "permanent": true },
+    { "source": "/contact.html", "destination": "/#contact", "permanent": true }
+  ]
+}
