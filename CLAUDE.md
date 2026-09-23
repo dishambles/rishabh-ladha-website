@@ -23,7 +23,7 @@ Plain HTML + CSS + vanilla JS. No framework, no build step, no dependencies.
 |---|---|---|
 | — | `#home` | Hero — statement, chain, credentials, CTA, B&W cutout with animated cobalt halo |
 | 01 | `#brands` | Worked with — roster table |
-| 02 | `#said` | Said about him — testimonial ticker (**placeholder cards, real LinkedIn posts still needed**) |
+| 02 | `#said` | Said about him — testimonial ticker (6 real LinkedIn posts, quoted + linked) |
 | — | `.strip` | Photo strip (4 greyscale event photos) |
 | 03 | `#proof` | Why it matters — thesis + counting figures |
 | — | `.interlude` | Full-bleed photo (ON BFSI award) |
@@ -73,7 +73,6 @@ Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-s
 
 ## Still needs Rishabh (all marked as HTML comments `[CONFIRM with Rishabh: ...]` / `[PASTE ...]` in `index.html` — never rendered)
 
-- **Testimonials** (`#said`): 6 real LinkedIn posts needed — quoted line, author name + title, post URL (wrap `.said__src` in `<a href>`). Currently placeholder/dashed-border slot cards.
 - **Form activation**: submit the contact form once, then Rishabh clicks FormSubmit's confirmation link.
 - Which client brands can be named — Founder Thesis publicly cites Kotak, AngelOne, IndiaMART as SquadStack clients, unconfirmed by him — `#brands`, `#work`.
 - The **pivot story** (SquadStack→EPIC; his LinkedIn departure post is the source), EPIC day-to-day + publishing restrictions, SquadStack internal numbers he's comfortable publishing — `#work`.
@@ -97,7 +96,7 @@ Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-s
 - [x] No `[CONFIRM]`/`[PASTE]` text renders publicly (all moved into HTML comments)
 - [x] Favicon, og:image (absolute URL), JSON-LD Person on index
 - [x] Rishabh's email wired into form, mailto links, JSON-LD
-- [ ] Real testimonials (6 LinkedIn posts) to replace the ticker's placeholder slot cards
+- [x] Real testimonials (6 LinkedIn posts) in the ticker, quoted + linked
 - [ ] Form activation: first submission + Rishabh clicks FormSubmit's confirmation link
 - [ ] Content interview with Rishabh (see "Still needs Rishabh")
 - [ ] Custom domain on Vercel (`rishabhladha.com`)
@@ -132,3 +131,7 @@ Built 5 pages (warm-minimal system, EB Garamond/Inter), deployed to Vercel, port
 - Copied in new event photos and the hero's B&W cutout (`portrait-cutout.png`) from the design handoff's assets.
 - Carried over all `[CONFIRM]`/`[PASTE]` HTML comments from the design references — content gaps are unchanged, see "Still needs Rishabh".
 - Built on branch `redesign/one-page-longscroll`, not yet merged to `main`.
+
+### 2026-09-23 — Real testimonials in the ticker
+- Replaced the 6 placeholder slot cards in `#said` with real LinkedIn posts (owner-sourced list of public posts mentioning Rishabh), each as a quoted line + `Name · Title · LinkedIn` linking to the original post: Hasmitha Rangaswamy (Growth and Product), Sharan Raj Vepamaninti, Siddhant Bassi, Vasudeva Kashyap, Durgesh Panchal, Aritra Mukherjee (the latter five all Mesa School of Business students/context).
+- Considered embedding the posts live (LinkedIn iframe embeds) instead of quoting; rejected it — LinkedIn's fixed-size branded iframe clashes with the site's custom `.said` card design, is a perf/jank risk at 12 concurrent iframes in an animating ticker, and breaks silently if a post's visibility ever changes. Quoting matches the design handoff's own intended markup.
