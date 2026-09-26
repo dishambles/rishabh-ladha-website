@@ -86,7 +86,7 @@ Fixed UI: top nav (links to every chapter, active link underlined) + left dot ra
 
 ## Contact & lead capture
 
-Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-system, with a `_honey` honeypot, wired to FormSubmit.co with Rishabh's email: **rishabhladha17@gmail.com**. **One-time activation still pending:** on the first submission, FormSubmit emails Rishabh a confirmation link he must click once; until then submissions are not delivered. Direct channels shown alongside: email (mailto), LinkedIn (`in.linkedin.com/in/rishabhladha`), X (`@rishabhladha`).
+Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-system, with a `_honey` honeypot, wired to FormSubmit.co with Rishabh's email: **rishabhladha17@gmail.com**. **One-time activation:** a test submission was sent from the live contact form on 2026-09-26 (owner-approved); FormSubmit replied "Check Your Email" and emailed an 'Activate Form' link to rishabhladha17@gmail.com. **Pending until Rishabh clicks it** — until then submissions are not delivered. Both forms (contact + resources request-access) post to the same address. Direct channels shown alongside: email (mailto), LinkedIn (`in.linkedin.com/in/rishabhladha`), X (`@rishabhladha`).
 
 ## Still needs Rishabh (all marked as HTML comments `[CONFIRM with Rishabh: ...]` / `[PASTE ...]` in `index.html` — never rendered)
 
