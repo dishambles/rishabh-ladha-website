@@ -99,10 +99,10 @@ Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-s
 
 ## Deployment
 
-- **Vercel**: https://rishabh-ladha-website.vercel.app — production auto-deploys on push to `main`.
+- **Vercel**: https://rishabhladha.com (also https://rishabh-ladha-website.vercel.app) — production auto-deploys on push to `main`.
 - **GitHub**: https://github.com/dishambles/rishabh-ladha-website
 - Vercel project is under Disha's `dishambles-projects` scope (transfer to Rishabh is a Vercel project-transfer operation if ever needed).
-- Custom domain not configured — `rishabhladha.com` was unregistered on 2026-09-26 (`.co` too). When a domain is added: point it at this Vercel project, then replace the absolute `rishabh-ladha-website.vercel.app` URLs in `og:image` and JSON-LD (`index.html`, `resources/index.html`) with the new domain.
+- **Custom domain: https://rishabhladha.com** (live 2026-09-26). Bought by Disha on GoDaddy; GoDaddy's nameservers were switched to **Vercel DNS** (`ns1.vercel-dns.com`, `ns2.vercel-dns.com`), so all DNS records now live in Vercel, not GoDaddy — add any future records (e.g. email MX) in Vercel. `www.rishabhladha.com` → 308 redirect to the apex (set via `vercel api` PATCH on the project domain). Check with `vercel domains verify rishabhladha.com --scope dishambles-projects`. `og:image`, JSON-LD and `<link rel="canonical">` in both pages point at `https://rishabhladha.com`. The old `rishabh-ladha-website.vercel.app` URL still serves the site.
 - `vercel.json` redirects the four old page paths (extension-less and `.html`), so any external links (LinkedIn headline, speaker bios, search results) into the old multi-page site keep working.
 
 ## Pre-launch checklist
@@ -116,7 +116,7 @@ Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-s
 - [x] Real testimonials (6 LinkedIn posts) in the ticker, quoted + linked
 - [x] Form activation: test submission sent + confirmation link clicked (2026-09-26)
 - [ ] Content interview with Rishabh (see "Still needs Rishabh")
-- [ ] Custom domain on Vercel (`rishabhladha.com`)
+- [x] Custom domain live on Vercel (`rishabhladha.com`, Vercel nameservers, www → apex)
 - [ ] Add URL to Rishabh's LinkedIn headline and speaker bios after launch
 
 Do NOT do a launch announcement post — it should feel like it's always been there.
