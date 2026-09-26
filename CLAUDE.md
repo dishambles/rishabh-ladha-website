@@ -86,11 +86,10 @@ Fixed UI: top nav (links to every chapter, active link underlined) + left dot ra
 
 ## Contact & lead capture
 
-Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-system, with a `_honey` honeypot, wired to FormSubmit.co with Rishabh's email: **rishabhladha17@gmail.com**. **One-time activation:** a test submission was sent from the live contact form on 2026-09-26 (owner-approved); FormSubmit replied "Check Your Email" and emailed an 'Activate Form' link to rishabhladha17@gmail.com. **Pending until Rishabh clicks it** — until then submissions are not delivered. Both forms (contact + resources request-access) post to the same address. Direct channels shown alongside: email (mailto), LinkedIn (`in.linkedin.com/in/rishabhladha`), X (`@rishabhladha`).
+Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-system, with a `_honey` honeypot, wired to FormSubmit.co with Rishabh's email: **rishabhladha17@gmail.com**. **One-time activation:** a test submission was sent from the live contact form on 2026-09-26 (owner-approved); FormSubmit replied "Check Your Email" and emailed an 'Activate Form' link to rishabhladha17@gmail.com. **Activated** — owner confirmed 2026-09-26; submissions now deliver to rishabhladha17@gmail.com. Both forms (contact + resources request-access) post to the same address. Direct channels shown alongside: email (mailto), LinkedIn (`in.linkedin.com/in/rishabhladha`), X (`@rishabhladha`).
 
 ## Still needs Rishabh (all marked as HTML comments `[CONFIRM with Rishabh: ...]` / `[PASTE ...]` in `index.html` — never rendered)
 
-- **Form activation**: submit the contact form once, then Rishabh clicks FormSubmit's confirmation link.
 - **Parked (Disha will collect later):** 2–3 testimonials from founders or sales leaders — `#work` ticker.
 - Testimonial headline "In their words." is a pick from options offered 2026-09-23 — owner may swap it.
 - Converge'26 panel (Feb 7 2026, 3one4 Capital, Bengaluru) — add to `resources/` Talks & podcasts when a recording/summary is published.
@@ -115,7 +114,7 @@ Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-s
 - [x] Rishabh's email wired into form, mailto links, JSON-LD
 - [x] OK from Orange Health, EquityList and Tenjin to show their logos, and Orange Health for the team photos (owner confirmed 2026-09-26)
 - [x] Real testimonials (6 LinkedIn posts) in the ticker, quoted + linked
-- [ ] Form activation: first submission + Rishabh clicks FormSubmit's confirmation link
+- [x] Form activation: test submission sent + confirmation link clicked (2026-09-26)
 - [ ] Content interview with Rishabh (see "Still needs Rishabh")
 - [ ] Custom domain on Vercel (`rishabhladha.com`)
 - [ ] Add URL to Rishabh's LinkedIn headline and speaker bios after launch
