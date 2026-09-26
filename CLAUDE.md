@@ -29,7 +29,7 @@ The page follows a narrative spine (owner decision 2026-09-23): **insight → al
 | 02 | `#alternatives` | "The usual sales enablement fixes don't stick." (one line, `.stmt-md`) — template playbooks, one-and-done training, no feedback loop (`.phases--3`) |
 | 03 | `#system` | The ideal outcome, not a pitch: "Sales enablement systems need to be built around your team and improved with you, with humans in the loop." Four parts in owner's order: context → sales expert → AI learning loop → continuous monitoring |
 | — | `.interlude` | Full-bleed photo (GTM Dialogues room), caption only |
-| 04 | `#what-we-do` | "The future of sales enablement." Two groups of three (`.offer`): **Human-led** — college classrooms, enterprise sales, leadership coaching; **Systems + human-led** — GTM systems, agents, learning modules. Each row links to `#contact` |
+| 04 | `#what-we-do` | "The future of sales enablement." Two columns of three (`.offer`), each headed by a photo, no group captions (removed by owner 2026-09-26): college classrooms, enterprise sales, leadership coaching | GTM systems, agents, learning modules. Each row links to `#contact` |
 | 05 | `#work` | Track record — roster (Work: SquadStack, Elevar Equity, EPIC World · Teaches at: Mesa, Scaler School of Business · Trained teams at: Orange Health / EquityList / Tenjin logos · Stages · Honours: Forbes) + "In their words." testimonial ticker |
 | — | `.strip` | Photo strip (GTM Dialogues talk, 2× Orange Health training, ON BFSI award) |
 | 06 | `#contact` | Work with me — About merged in (portrait + name + positioning line in `.sig`), black end block, FormSubmit contact form |
