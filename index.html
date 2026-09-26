@@ -210,6 +210,9 @@
      FormSubmit emails rishabhladha17@gmail.com a confirmation link — Rishabh must
      click it once, after which submissions are delivered to his inbox. -->
 <form class="form" action="https://formsubmit.co/rishabhladha17@gmail.com" method="POST" data-rise>
+<!-- After sending, FormSubmit returns people here; motion.js swaps the form for the note below. -->
+<input type="hidden" name="_next" value="https://rishabhladha.com/?sent=1#contact">
+<p class="form__sent" data-sent-note="sent" hidden><b>Thanks, your message is on its way.</b> I&rsquo;ll reply soon.</p>
 <div class="f"><label for="name">Your name</label><input id="name" type="text" name="name" placeholder="Your name" required></div>
 <div class="f"><label for="email">Email</label><input id="email" type="email" name="email" placeholder="Email" required></div>
 <div class="f"><label for="message">What do you need?</label><textarea id="message" name="message" placeholder="What do you need?" required></textarea></div>

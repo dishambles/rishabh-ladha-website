@@ -97,6 +97,9 @@
 <!-- Same FormSubmit endpoint as the contact form; _subject marks these as access requests. -->
 <form class="form" action="https://formsubmit.co/rishabhladha17@gmail.com" method="POST" data-rise>
 <input type="hidden" name="_subject" value="Resource access request">
+<!-- After sending, FormSubmit returns people here; motion.js swaps the form for the note below. -->
+<input type="hidden" name="_next" value="https://rishabhladha.com/resources/?requested=1#request">
+<p class="form__sent" data-sent-note="requested" hidden><b>Thanks, you&rsquo;re on the list.</b> You&rsquo;ll get access as soon as it opens.</p>
 <div class="f"><label for="r-name">Your name</label><input id="r-name" type="text" name="name" placeholder="Your name" required></div>
 <div class="f"><label for="r-email">Email</label><input id="r-email" type="email" name="email" placeholder="Email" required></div>
 <div class="f"><label for="r-what">What would you like?</label><select id="r-what" name="resource" required>

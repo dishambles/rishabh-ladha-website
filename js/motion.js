@@ -218,4 +218,14 @@
       else { cur.classList.remove('is-label'); label.textContent = ''; }
     });
   }
+
+  // form return: FormSubmit sends people back with ?sent=1 / ?requested=1 — show the thank-you note
+  // in place of the fields, then drop the flag so a refresh shows the form again
+  const qs = new URLSearchParams(location.search);
+  document.querySelectorAll('[data-sent-note]').forEach((note) => {
+    if (!qs.has(note.dataset.sentNote)) return;
+    note.hidden = false;
+    note.closest('form').classList.add('is-sent');
+    history.replaceState(null, '', location.pathname + location.hash);
+  });
 })();

@@ -279,6 +279,10 @@ html.js [data-words].is-in .w{opacity:1;transform:none;filter:none}
 .sig .hero__thumb{width:clamp(56px,5vw,72px);border-color:#333}
 .sig .note{margin-top:8px}
 .form{display:flex;flex-direction:column;gap:clamp(18px,2vw,26px)}
+/* thank-you note shown in place of the fields when FormSubmit returns people to the site */
+.form.is-sent>:not(.form__sent){display:none}
+.form__sent{font-size:clamp(18px,1.6vw,24px);line-height:1.35;color:#c9c9c9;border-top:1px solid #4a4a4a;padding-top:clamp(18px,2vw,26px)}
+.form__sent b{display:block;color:var(--paper);font-weight:800}
 .f{display:flex;flex-direction:column;gap:8px}
 .f label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f}
 .f input,.f textarea,.f select{font-family:inherit;font-size:clamp(15px,1.2vw,18px);color:var(--paper);background:none;border:0;border-bottom:1px solid #4a4a4a;padding:8px 0;transition:border-color .25s var(--ease)}
