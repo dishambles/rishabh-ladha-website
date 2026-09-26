@@ -15,7 +15,7 @@ Plain HTML + CSS + vanilla JS. No framework, no build step, no dependencies.
 - `styles/site.css` — all styles, design tokens in `:root`
 - `js/motion.js` — all behaviour: scroll reveals, word-splitting, counters, parallax, dot-rail/nav sync, custom cursor
 - `favicon.svg` — RL monogram (ink square, paper letters, red underline)
-- `assets/images/` — `rishabh-portrait.jpg` (884×822 source), `portrait-cutout.png` (transparent B&W-ready cutout used in the hero). Photos (all from Disha's `~/Downloads/Website images`, EXIF-rotated, ≤1600px, metadata stripped where converted) and where they're used: `orange-health-training.jpg` (insight, beside the copy, captioned Orange Health · Sales team training), `class-group.jpg` (IMG_1473, class group photo — What we do, human-led column; source class not specified, so no caption), `rishabh-at-work.jpg` (IMG_6675, at his desk — What we do, systems column), `gtmdialogues-room.jpg` (interlude after the system), strip: `gtmdialogues-talk.jpg`, `keynote-bfsi-cxo.jpg`, `orange-health-team.jpg`, `award-onbfsi.jpg`; `gtmdialogues-group.jpg` (resources page interlude). Unused: `classroom-session.jpg`, `mesa-panel.jpg` (owner: not actually Mesa). `assets/images/logos/` holds the client logos `orange-health.svg`, `equitylist.svg`, `tenjin.svg` — each company's own file from its website, rendered solid black via `.logos img{filter:brightness(0)}`
+- `assets/images/` — `rishabh-portrait.jpg` (884×822 source), `portrait-cutout.png` (transparent B&W-ready cutout used in the hero). Photos (all from Disha's `~/Downloads/Website images`, EXIF-rotated, ≤1600px, metadata stripped where converted) and where they're used: `orange-health-training.jpg` (insight, beside the copy, captioned Orange Health · Sales team training), `class-group.jpg` (IMG_1473, class group photo — What we do, human-led column; no caption, by owner choice), `rishabh-at-work.jpg` (IMG_6675, at his desk — What we do, systems column), `gtmdialogues-room.jpg` (interlude after the system), strip: `gtmdialogues-talk.jpg`, `keynote-bfsi-cxo.jpg`, `orange-health-team.jpg`, `award-onbfsi.jpg`; `gtmdialogues-group.jpg` (resources page interlude). Unused: `classroom-session.jpg`, `mesa-panel.jpg` (owner: not actually Mesa). `assets/images/logos/` holds the client logos `orange-health.svg`, `equitylist.svg`, `tenjin.svg` — each company's own file from its website, rendered solid black via `.logos img{filter:brightness(0)}`
 - `vercel.json` — permanent redirects from the old page paths: `/work` and `/teaching` → `/#work`, `/in-the-wild` → `/resources/#talks`, `/contact` → `/#contact` (plus `.html` forms)
 
 ## Page structure (top to bottom)
@@ -24,7 +24,7 @@ The page follows a narrative spine (owner decision 2026-09-23): **insight → al
 
 | # | id | Chapter |
 |---|---|---|
-| — | `#home` | Hero — "Improving sales talent in India", chain previewing the system (context · expert · AI loop), lead "I build sales programs around your team, then stay on to keep improving them.", one credential (On the revenue side: 11 years — owner wants proof numbers added here, pending his CV), CTA, B&W cutout with animated cobalt halo |
+| — | `#home` | Hero — "Improving sales talent in India", chain previewing the system (context · expert · AI loop), lead "I build sales programs around your team, then stay on to keep improving them.", three proof figures from his CV (11 years on the revenue side · $10M enterprise bookings built · 50+ sales reps trained), CTA, B&W cutout with animated cobalt halo |
 | 01 | `#insight` | The insight — cobalt `?` tag + "Why does the world's best tennis player still have a coach?" + "Every seller needs a coach" |
 | 02 | `#alternatives` | "The usual sales enablement fixes don't stick." (one line, `.stmt-md`) — template playbooks, one-and-done training, no feedback loop (`.phases--3`) |
 | 03 | `#system` | The ideal outcome, not a pitch: "Sales enablement systems need to be built around your team and improved with you, with humans in the loop." Four parts in owner's order: context → sales expert → AI learning loop → continuous monitoring |
@@ -71,6 +71,7 @@ Fixed UI: top nav (links to every chapter, active link underlined) + left dot ra
 - EPIC/EHI: "~250M entrepreneurial households transacting up to $10 trillion a year"; "$100 trillion" is a **20-year projection**, never a present-day figure. EHI Index: 34 companies, ~$115Bn combined market cap **at launch (Feb 2025)**, with Morningstar Indexes.
 - Tenures: SquadStack "2015–2024 / nine years" (end date publicly fuzzy — his departure post is ~April 2025); "eleven years on the revenue side" = whole career including EPIC. Don't state an EPIC join year.
 - ICMA talk was **Vienna 2018** (not 2021). Elets keynote title is "Transforming Sales with Better CX in 2024".
+- **From Rishabh's CV (owner-supplied 2026-09-26, `~/Downloads/Rishabh_Ladha_CV (3).docx`) — his own figures, safe to use as stated:** rebuilt SquadStack India enterprise bookings from near-zero to **$10M** (2020–24, after ARR fell from $5M to <$1M in Covid); **100+** enterprise and mid-market accounts sold and onboarded; built and led a team of **30+** across Sales, Marketing and CS; raised **$21M** Seed through Series B (led the $14M Series B and the $2M seed); **50+** reps trained across businesses since 2024 (PE-backed SaaS QA platform, Series B healthtech, seed-stage startup); Elevar Equity **2012–15**, $200M in deals; EPIC Head of GTM since May 2025 (don't publish the year), $4M pipeline / 24+ deals / 150+ demos in 6 months; summarised 10+ sales books; founded the Masters of Sales community. CV says "14+ years building GTM" (includes the VC years) — the site keeps "11 years on the revenue side" (2015–now). If a funding figure returns, use the CV's $21M, not Tracxn's $24.9M.
 
 
 **Owner answers, 2026-09-23 (content pass):**
@@ -102,7 +103,7 @@ Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-s
 - **Vercel**: https://rishabh-ladha-website.vercel.app — production auto-deploys on push to `main`.
 - **GitHub**: https://github.com/dishambles/rishabh-ladha-website
 - Vercel project is under Disha's `dishambles-projects` scope (transfer to Rishabh is a Vercel project-transfer operation if ever needed).
-- Custom domain not configured — target `rishabhladha.com` (confirm with Rishabh).
+- Custom domain not configured — `rishabhladha.com` was unregistered on 2026-09-26 (`.co` too). When a domain is added: point it at this Vercel project, then replace the absolute `rishabh-ladha-website.vercel.app` URLs in `og:image` and JSON-LD (`index.html`, `resources/index.html`) with the new domain.
 - `vercel.json` redirects the four old page paths (extension-less and `.html`), so any external links (LinkedIn headline, speaker bios, search results) into the old multi-page site keep working.
 
 ## Pre-launch checklist
@@ -112,7 +113,7 @@ Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-s
 - [x] No `[CONFIRM]`/`[PASTE]` text renders publicly (all moved into HTML comments)
 - [x] Favicon, og:image (absolute URL), JSON-LD Person on index
 - [x] Rishabh's email wired into form, mailto links, JSON-LD
-- [ ] Quick OK from Orange Health, EquityList and Tenjin to show their logos (and from Orange Health for the two team photos)
+- [x] OK from Orange Health, EquityList and Tenjin to show their logos, and Orange Health for the team photos (owner confirmed 2026-09-26)
 - [x] Real testimonials (6 LinkedIn posts) in the ticker, quoted + linked
 - [ ] Form activation: first submission + Rishabh clicks FormSubmit's confirmation link
 - [ ] Content interview with Rishabh (see "Still needs Rishabh")

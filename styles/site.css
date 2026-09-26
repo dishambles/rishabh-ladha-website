@@ -80,9 +80,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .reg::after{content:'';position:absolute;inset:3px;border:1px solid var(--quiet-dec);border-radius:50%}
 .hero__belief{grid-column:1;margin-top:clamp(28px,5vh,56px);max-width:440px}
 .hero__lead{font-size:clamp(19px,1.7vw,26px);line-height:1.25;font-weight:500;letter-spacing:-.01em;text-wrap:pretty}
-.creds{list-style:none;margin:clamp(16px,2vw,24px) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:14px clamp(20px,2.4vw,36px)}
-.creds li{display:flex;flex-direction:column;gap:3px;font-size:clamp(14px,1.1vw,16px);font-weight:700}
-.creds b{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--quiet)}
+/* hero proof numbers: big value, small label under it (markup keeps label first for screen readers) */
+.creds{list-style:none;margin:clamp(18px,2.2vw,28px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px clamp(16px,2vw,28px);border-top:1px solid var(--rule);padding-top:clamp(14px,1.6vw,20px)}
+.creds li{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:6px;font-size:clamp(24px,2.3vw,34px);font-weight:800;text-transform:uppercase;letter-spacing:-.02em;line-height:.95}
+.creds b{font-size:10.5px;font-weight:700;letter-spacing:.14em;line-height:1.35;text-transform:uppercase;color:var(--quiet)}
 .hero__name{position:relative;z-index:3;margin-top:clamp(28px,6vh,72px);line-height:.78;white-space:nowrap;font-size:min(clamp(56px,13.6vw,224px),11vw);max-width:100%;color:var(--black)}
 .hero .hero__name{max-width:var(--split);font-size:min(clamp(56px,13.6vw,224px),7.6vw);mix-blend-mode:difference;color:#f2f2f2}
 @media(max-width:899px){.hero__grid{grid-template-columns:1fr}.hero__asides{align-items:flex-start;text-align:left}.reg{margin-left:0}}
