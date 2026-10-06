@@ -239,6 +239,11 @@ html.js [data-words].is-in .w{opacity:1;transform:none;filter:none}
 .entry__b .copy--wide{max-width:none}
 @media(max-width:899px){.entry{grid-template-columns:1fr}}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+/* resources: hand-written entry lists; the empty note shows only while a list has no .entry */
+.entries{margin-top:clamp(28px,4vw,56px)}
+.entries__empty{display:none;margin-top:clamp(18px,2.4vw,30px);color:var(--quiet)}
+.entries:not(:has(.entry)){display:none}
+.entries:not(:has(.entry)) + .entries__empty{display:block}
 /* client logos: the companies' own files, forced to solid black to sit in the one-accent system */
 .logos{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(20px,3.4vw,52px);margin-top:4px}
 .logos img{height:calc(var(--h,1) * clamp(22px,2.2vw,30px));width:auto;filter:brightness(0);opacity:.88}

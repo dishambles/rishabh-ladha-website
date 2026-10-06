@@ -3,6 +3,14 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reduce) document.documentElement.classList.add('js');
 
+  // resources entry lists: newest first by <time datetime>, whatever order they were written in
+  document.querySelectorAll('[data-entries]').forEach((list) => {
+    const when = (el) => (el.querySelector('time[datetime]') || {}).dateTime || '';
+    [...list.querySelectorAll(':scope > .entry')]
+      .sort((a, b) => when(b).localeCompare(when(a)))
+      .forEach((el) => list.appendChild(el));
+  });
+
   // split statement headlines into words so they can stagger in
   if (!reduce) {
     document.querySelectorAll('[data-words]').forEach((el) => {

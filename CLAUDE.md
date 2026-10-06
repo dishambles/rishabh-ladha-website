@@ -11,7 +11,7 @@ A single-page, long-scroll site (redesigned 2026-09-23, replacing the earlier 5-
 Plain HTML + CSS + vanilla JS. No framework, no build step, no dependencies.
 
 - `index.html` — the main page, organised into 6 numbered chapters (see below) plus a hero, one full-bleed interlude and a photo strip
-- `resources/index.html` — Resources page (off the main scroll): coming-soon grid with request access, talks & podcasts, request-access form. Uses `../` relative paths to the shared CSS/JS/assets
+- `resources/index.html` — Resources page (off the main scroll): **LinkedIn perspectives** and **Notes & summaries** entry lists (added 2026-10-06), coming-soon grid with request access, talks & podcasts, request-access form. Entries are hand-written `<article class="entry">` blocks inside each `[data-entries]` list (copy the template in the HTML comment above the sections); `motion.js` sorts them newest-first by `<time datetime>`, and a list with no entries shows its `.entries__empty` note instead (CSS `:has`). No LinkedIn/Notion/Apple Notes integration by design: content is pasted in by hand. Both lists ship empty — **don't merge to `main` until each has at least one real entry**, or the page leads with two empty sections. Uses `../` relative paths to the shared CSS/JS/assets
 - `styles/site.css` — all styles, design tokens in `:root`
 - `js/motion.js` — all behaviour: scroll reveals, word-splitting, counters, parallax, dot-rail/nav sync, custom cursor
 - `favicon.svg` — RL monogram (ink square, paper letters, red underline)
@@ -96,6 +96,7 @@ Form is a plain HTML POST (no JS submission handling) in `#contact`, styled in-s
 - **Numbers:** owner wants proof numbers for the hero ("on the revenue side") and possibly program figures; waiting on Rishabh's CV.
 - More photos welcome: current slots are filled (insight, What we do ×2, interlude, strip, resources); unused `classroom-session.jpg`/`mesa-panel.jpg` need their real source before use.
 - Resources page items are all "coming soon" with request access (FormSubmit, `_subject` "Resource access request").
+- **Resources entries:** real LinkedIn posts and book summaries/notes for the two new entry lists. Never invent them; publish Notion/Apple Notes content only with Rishabh's OK.
 
 ## Deployment
 
